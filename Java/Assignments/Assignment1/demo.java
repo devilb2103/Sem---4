@@ -1,5 +1,4 @@
 package Java.Assignments.Assignment1;
-import java.util.Scanner;
 
 public class demo {
     
@@ -7,7 +6,7 @@ public class demo {
         
         input dat = new input();
         calc calc = new calc();
-        double res;
+        
         while (true) {
             System.out.println(
                 """
@@ -24,36 +23,40 @@ public class demo {
                 """);
             
             System.out.println("Your option: ");
-            Scanner sc = new Scanner(System.in);
-                int option = sc.nextInt();
+            int option = dat.intInput();
             switch (option) {
                 case 1:
-res = calc.addition();
+                    System.out.println(calc.addition());
+                    continue;
                 case 2:
-                res =           calc.subtratcion();
+                    System.out.println(calc.subtratcion());
+                    continue;
                 case 3:
-                res = calc.multiplication();
-                
+                    System.out.println(calc.multiplication());
+                    continue;
                 case 4:
-                res = calc.division();
-                
+                    System.out.println(calc.division());
+                    continue;
                 case 5:
-                res = calc.squareRoot();
-                
+                    System.out.println(calc.squareRoot());
+                    continue;
                 case 6:
-                res = calc.power();
-                
+                    System.out.println(calc.power());
+                    continue;
                 case 7:
-                res = calc.mean();
-                
+                    System.out.println(calc.mean());
+                    continue;
                 case 8:
-                res = calc.variance();
+                    System.out.println(calc.variance());
+                    continue;
                 case 9:
-                return;
+                    return;
+
                 default:
                     System.out.println("Invalid Option");;
             }
-            System.out.println();
+
+            // System.out.println(res);
         }
     }
 }

@@ -6,52 +6,60 @@ public class calc {
     input dat = new input();
 
     public double addition(){
-        double num1 = dat.numInput();
-        double num2 = dat.numInput();
+        System.out.println("Performing addition");
+        double num1 = dat.doubleInput();
+        double num2 = dat.doubleInput();
 
         return num1 + num2;
     }
 
     public double subtratcion(){
-        double num1 = dat.numInput();
-        double num2 = dat.numInput();
+        System.out.println("Performing subtraction");
+        double num1 = dat.doubleInput();
+        double num2 = dat.doubleInput();
 
-        return ;
+        return num1 - num2;
     }
 
     public double multiplication(){
-        double num1 = dat.numInput();
-        double num2 = dat.numInput();
+        System.out.println("Performing multiplication");
+        double num1 = dat.doubleInput();
+        double num2 = dat.doubleInput();
 
         return num1 * num2;
     }
 
     public double division(){
-        double num1 = dat.numInput();
-        double num2 = dat.numInput();
+        System.out.println("Performing division");
+        double num1 = dat.doubleInput();
+        double num2 = dat.doubleInput();
 
         return num1 / num2;
     }
 
     public double squareRoot(){
-        double num1 = dat.numInput();
+        System.out.println("Performing root");
+        double num1 = dat.doubleInput();
 
         return Math.sqrt(num1);
     }
 
     public double power(){
-        double num1 = dat.numInput();
-        double num2 = dat.numInput();
+        System.out.println("Performing power");
+        double num1 = dat.doubleInput();
+        double num2 = dat.doubleInput();
 
         return Math.pow(num1, num2);
     }
 
     public double mean(){
+        System.out.println("Performing mean (type end to stop taking inputs)");
         double sum = 0;
         int count = 0;
         while (true) {
             String num = dat.strInput();
-            if(num == "end"){
+            // System.out.println(num == "end");
+            if(num.equals("end")){
                 break;
             }
             else{
@@ -64,14 +72,15 @@ public class calc {
     }
 
     public double variance(){
-        System.out.println("Enter number of inputs.");
+        System.out.println("Performing variance");
+        System.out.println("Enter number of inputs");
         int len = Integer.valueOf(dat.strInput());
 
         double[] nums = new double[len];
 
         // store inputs
         for (int i = 0; i < len; i++) {
-            nums[i] = dat.numInput();
+            nums[i] = dat.doubleInput();
         }
 
         // compute mean

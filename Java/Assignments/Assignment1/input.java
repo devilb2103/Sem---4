@@ -4,11 +4,20 @@ import java.util.Scanner;;
 
 public class input {
     
-    public double numInput(){
+    public int intInput(){
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+
+        // sc.close();
+
+        return num;
+    }
+    
+    public double doubleInput(){
         Scanner sc = new Scanner(System.in);
         double num = sc.nextDouble();
 
-        sc.close();
+        // sc.close();
 
         return num;
     }
@@ -17,7 +26,7 @@ public class input {
         Scanner sc = new Scanner(System.in);
         String str = sc.next();
 
-        sc.close();
+        // sc.close();
 
         return str;
     }
