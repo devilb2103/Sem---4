@@ -4,7 +4,7 @@ public class demo {
     
     public static void main(String[] args){
         
-        input dat = new input();
+        InputClass dat = new InputClass();
         calc calc = new calc();
         
         while (true) {

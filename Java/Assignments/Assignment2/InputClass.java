@@ -1,8 +1,8 @@
-package Java.Assignments.Assignment1;
+package Java.Assignments.Assignment2;
 
-import java.util.Scanner;;
+import java.util.Scanner;
 
-public class input {
+public class InputClass {
     
     public int intInput(){
         Scanner sc = new Scanner(System.in);

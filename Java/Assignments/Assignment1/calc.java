@@ -3,7 +3,7 @@ package Java.Assignments.Assignment1;
 import java.lang.Math;
 
 public class calc {
-    input dat = new input();
+    InputClass dat = new InputClass();
 
     public double addition(){
         System.out.println("Performing addition");
