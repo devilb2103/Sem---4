@@ -1,5 +1,8 @@
 package Java.Assignments.Assignment2;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class main {
     
     public static void main(String[] args) {
@@ -23,10 +26,19 @@ public class main {
             }
         }
 
-        System.out.println(arr.getEven());
-        System.out.println(arr.getOdd());
+        System.out.println("Even Array: " + Arrays.toString(arr.getEven()));
+        System.out.println("Odd Array: " + Arrays.toString(arr.getOdd()));
 
         int dist[] = arr.findSmallestDistance();
         System.out.println("Smallest dist is " + dist[0] + " at index " + dist[1]);
+
+        // array to arraylist
+        ArrayList<Integer> arrList = arr.arrayToArrayList(arr.getArr());
+        System.out.println("Array converted to Array list: " + arrList);
+
+        // arraylist to array
+        // Object arrPrimitive[] = arr.ArrayListToArray(arrList);
+        int arrPrimitive[] = arr.ArrayListToArray(arrList);
+        System.out.println("Array list converted to Primitive Array: " + Arrays.toString(arrPrimitive));
     }
 }

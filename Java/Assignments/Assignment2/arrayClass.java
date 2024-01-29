@@ -13,12 +13,16 @@ public class arrayClass {
 
     // getter setter ---------------------
     
-    public String getEven(){
-        return Arrays.toString(this.even);
+    public int[] getEven(){
+        return this.even;
     }
 
-    public String getOdd(){
-        return Arrays.toString(this.odd);
+    public int[] getOdd(){
+        return this.odd;
+    }
+
+    public int[] getArr(){
+        return this.nums;
     }
     
     // utilit functions ---------------------
@@ -62,7 +66,7 @@ public class arrayClass {
     }
 
     public ArrayList<Integer> arrayToArrayList(int arr[]){
-        ArrayList<Integer> arrList = new ArrayList();
+        ArrayList<Integer> arrList = new ArrayList<Integer>();
 
         for (int i = 0; i < arr.length; i++) {
             arrList.add(arr[i]);
@@ -71,8 +75,16 @@ public class arrayClass {
         return arrList;
     }
 
-    public int[] arrayToArrayList(ArrayList<Integer> arr){
-        return arr.toArray();
+    public int[] ArrayListToArray(ArrayList<Integer> arrList){
+        Object ObjArray[] = arrList.toArray();
+
+        int arr[] = new int[ObjArray.length];
+
+        for (int i = 0; i < ObjArray.length; i++) {
+            arr[i] = (int)ObjArray[i];
+        }
+
+        return arr;
     }
 
 }
