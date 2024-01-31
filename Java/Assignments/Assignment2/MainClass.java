@@ -3,7 +3,7 @@ package Java.Assignments.Assignment2;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class main {
+public class MainClass {
     
     public static void main(String[] args) {
         InputClass input = new InputClass();
@@ -11,7 +11,7 @@ public class main {
         System.out.println("Enter number of inputs: ");
         int numCount = input.intInput();
 
-        arrayClass arr = new arrayClass(numCount);
+        ArrayClass arr = new ArrayClass(numCount);
 
         for (int i = 0; i < numCount; i++) {
             int num = input.intInput();
@@ -26,9 +26,11 @@ public class main {
             }
         }
 
+        // print odd and even array
         System.out.println("Even Array: " + Arrays.toString(arr.getEven()));
         System.out.println("Odd Array: " + Arrays.toString(arr.getOdd()));
 
+        // print smallest neighbooring distance
         int dist[] = arr.findSmallestDistance();
         System.out.println("Smallest dist is " + dist[0] + " at index " + dist[1]);
 
