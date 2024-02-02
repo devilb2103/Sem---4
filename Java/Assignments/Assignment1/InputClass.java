@@ -74,17 +74,17 @@ public class InputClass {
         }
     }
 
-    // factorial using Data input stream
-    public void factorialDataInputStream(){
-        DataInputStream dis = new DataInputStream(System.in);
-        try {
-            System.out.println("Enter Number 1: ");
-            int factorial_num = Integer.parseInt(dis.readLine());
-            System.out.println(String.format("Factorial of %d is: %d", factorial_num, calc.factorial(factorial_num)));
-        } catch (IOException | NumberFormatException e) {
-            System.out.println("Invalid input");
-        }
-    }
+    // factorial using Data input stream () ====== DEPRECATED
+    // public void factorialDataInputStream(){
+    //     DataInputStream dis = new DataInputStream(System.in);
+    //     try {
+    //         System.out.println("Enter Number 1: ");
+    //         int factorial_num = Integer.parseInt(dis.readLine());
+    //         System.out.println(String.format("Factorial of %d is: %d", factorial_num, calc.factorial(factorial_num)));
+    //     } catch (IOException | NumberFormatException e) {
+    //         System.out.println("Invalid input");
+    //     }
+    // }
 
     // factorial using factorial console
     public void factorialConsole(){

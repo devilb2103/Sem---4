@@ -41,7 +41,8 @@ public class MainClass {
                 
                 case 4:
                     // factorial using Data input stream
-                    input.factorialDataInputStream();
+                    // input.factorialDataInputStream();
+                    System.out.println("Code is in file but method is deprecated which causes compilation errors");
                     break;
                 
                 case 5:
@@ -83,42 +84,42 @@ public class MainClass {
             switch (option) {
                 case 1:
                     // perform Addition
-                    System.out.println(String.format("Addition Result: ", calc.addition()));
+                    System.out.println(String.format("Addition Result: %.2f", calc.addition()));
                     break;
                     
                 case 2:
                     // perform Subtraction
-                    System.out.println(String.format("Subtraction Result: ", calc.subtraction()));
+                    System.out.println(String.format("Subtraction Result: %.2f", calc.subtraction()));
                     break;
                     
                 case 3:
                     // perform Multiplication
-                    System.out.println(String.format("Multiplication Result: ", calc.multiplication()));
+                    System.out.println(String.format("Multiplication Result: %.2f", calc.multiplication()));
                     break;
 
                 case 4:
                     // perform Division
-                    System.out.println(String.format("Division Result: ", calc.division()));
+                    System.out.println(String.format("Division Result: %.2f", calc.division()));
                     break;
 
                 case 5:
                     // perform SquareRoot
-                    System.out.println(String.format("SquareRoot Result: ", calc.squareRoot()));
+                    System.out.println(String.format("SquareRoot Result: %.2f", calc.squareRoot()));
                     break;
 
                 case 6:
                     // perform Power
-                    System.out.println(String.format("Power Result: ", calc.power()));
+                    System.out.println(String.format("Power Result: %.2f", calc.power()));
                     break;
 
                 case 7:
                     // perform Mean
-                    System.out.println(String.format("Mean Result: ", calc.mean()));
+                    System.out.println(String.format("Mean Result: %.2f", calc.mean()));
                     break;
                     
                 case 8:
                     // perform Variance
-                    System.out.println(String.format("Variance Result: ", calc.variance()));
+                    System.out.println(String.format("Variance Result: %.2f", calc.variance()));
                     break;
 
                 case 9:

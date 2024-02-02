@@ -122,6 +122,6 @@ public class Calc {
         }
 
         // return variance
-        return var_numerator / (len - 1);
+        return var_numerator / (len);
     }
 }
