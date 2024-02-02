@@ -1,5 +1,4 @@
-package Java.Labs.Lab2;
-
+package Java.Theory.Theory9;
 public class Main extends KadhaiPaneer{
 
     public static void main(String[] args) {

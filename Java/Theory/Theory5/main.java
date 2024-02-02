@@ -1,3 +1,4 @@
+package Java.Theory.Theory5;
 public class main{
     public static void main(String[] args){
         data obj = new data();

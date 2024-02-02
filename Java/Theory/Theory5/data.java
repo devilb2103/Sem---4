@@ -1,3 +1,4 @@
+package Java.Theory.Theory5;
 public class data{
 
     int x;

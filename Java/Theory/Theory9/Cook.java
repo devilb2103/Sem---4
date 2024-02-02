@@ -1,4 +1,3 @@
-package Java.Labs.Lab2;
-
+package Java.Theory.Theory9;
 public class Cook extends KadhaiPaneer{
 }

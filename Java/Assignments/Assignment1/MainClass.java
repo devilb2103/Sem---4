@@ -5,7 +5,7 @@ public class MainClass {
     public static void main(String[] args){
         
         InputClass input = new InputClass();
-        calc calc = new calc();
+        Calc calc = new Calc();
         
         while (true) {
             System.out.println(

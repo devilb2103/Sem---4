@@ -2,7 +2,7 @@ package Java.Assignments.Assignment1;
 
 import java.lang.Math;
 
-public class calc {
+public class Calc {
     // input class
     InputClass input = new InputClass();
     

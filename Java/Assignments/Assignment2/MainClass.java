@@ -43,6 +43,7 @@ public class MainClass {
         int arrPrimitive[] = arr.ArrayListToArray(arrList);
         System.out.println("Array list converted to Primitive Array: " + Arrays.toString(arrPrimitive));
 
+        // dispose scanner class instance in InputClass object
         input.disposeScanner();
     }
 }

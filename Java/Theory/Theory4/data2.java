@@ -1,3 +1,5 @@
+package Java.Theory.Theory4;
+
 public class data2 {
 
     int x = 10;

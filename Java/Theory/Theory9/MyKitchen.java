@@ -1,4 +1,4 @@
-package Java.Labs.Lab2;
+package Java.Theory.Theory9;
 
 public interface MyKitchen {
     public void toCook();

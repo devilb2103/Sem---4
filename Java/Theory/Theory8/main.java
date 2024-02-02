@@ -1,3 +1,5 @@
+package Java.Theory.Theory8;
+
 /**
  * main
  */
