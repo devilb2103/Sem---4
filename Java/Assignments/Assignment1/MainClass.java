@@ -1,5 +1,3 @@
-package Java.Assignments.Assignment1;
-
 public class MainClass {
     
     public static void main(String[] args){
@@ -7,7 +5,65 @@ public class MainClass {
         InputClass input = new InputClass();
         Calc calc = new Calc();
         
-        while (true) {
+        // Assignment Part 1
+        boolean exitPart1 = false;
+        while (!exitPart1) {
+            System.out.println(
+                """
+                    Calculate Factorial using:-
+
+                    1) Use Command Line Args
+                    2) Use Scanner
+                    3) Use BufferedReader
+                    4) Use DataInputStream
+                    5) Use Console
+                    6) Go to part 2 of Assignment
+                    
+                """);
+            
+            System.out.println("Your option: ");
+            int option = input.intInput();
+            switch (option) {
+                case 1:
+                    // factorial using Command Line Args
+                    input.factorialCommandLineArgs(args);
+                    break;
+
+                case 2:
+                    // factorial using Scanner
+                    input.factorialScanner();
+                    break;
+                
+                case 3:
+                    // factorial using Buffered Reader
+                    input.factorialBufferedReader();
+                    break;
+                
+                case 4:
+                    // factorial using Data input stream
+                    input.factorialDataInputStream();
+                    break;
+                
+                case 5:
+                    // factorial using factorial console
+                    input.factorialConsole();
+                    break;
+                
+                case 6:
+                    // exit part 1 and move to part 2
+                    exitPart1 = true;
+                    break;
+                
+                default:
+                    System.out.println("Invalid Option");
+                    break;
+            }
+
+        }
+
+        // Assignment Part 2
+        boolean exitPart2 = false;
+        while (!exitPart2) {
             System.out.println(
                 """
                     1) Add
@@ -26,39 +82,56 @@ public class MainClass {
             int option = input.intInput();
             switch (option) {
                 case 1:
+                    // perform Addition
                     System.out.println(String.format("Addition Result: ", calc.addition()));
-                    continue;
+                    break;
+                    
                 case 2:
+                    // perform Subtraction
                     System.out.println(String.format("Subtraction Result: ", calc.subtraction()));
-                    continue;
+                    break;
+                    
                 case 3:
+                    // perform Multiplication
                     System.out.println(String.format("Multiplication Result: ", calc.multiplication()));
-                    continue;
+                    break;
+
                 case 4:
+                    // perform Division
                     System.out.println(String.format("Division Result: ", calc.division()));
-                    continue;
+                    break;
+
                 case 5:
+                    // perform SquareRoot
                     System.out.println(String.format("SquareRoot Result: ", calc.squareRoot()));
-                    continue;
+                    break;
+
                 case 6:
+                    // perform Power
                     System.out.println(String.format("Power Result: ", calc.power()));
-                    continue;
+                    break;
+
                 case 7:
+                    // perform Mean
                     System.out.println(String.format("Mean Result: ", calc.mean()));
-                    continue;
+                    break;
+                    
                 case 8:
+                    // perform Variance
                     System.out.println(String.format("Variance Result: ", calc.variance()));
-                    continue;
+                    break;
+
                 case 9:
-                    // dispose scanner class instance in InputClass object
+                    // dispose scanner class instance in InputClass object before exitting program
                     input.disposeScanner();
-                    return;
+                    exitPart2 = true;
+                    break;
 
                 default:
-                    System.out.println("Invalid Option");;
+                    System.out.println("Invalid Option");
+                    break;
             }
 
-            // System.out.println(res);
         }
     }
 }

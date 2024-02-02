@@ -1,10 +1,14 @@
-package Java.Assignments.Assignment1;
-
 import java.lang.Math;
 
 public class Calc {
     // input class
     InputClass input = new InputClass();
+
+    // Calculate factorial recursively
+    public int factorial(int x){
+        if(x <= 1) return x;
+        else return x * factorial(x - 1);
+    }
     
 
     // Perform addition calculation
