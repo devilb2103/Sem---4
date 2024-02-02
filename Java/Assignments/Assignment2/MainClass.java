@@ -42,5 +42,7 @@ public class MainClass {
         // Object arrPrimitive[] = arr.ArrayListToArray(arrList);
         int arrPrimitive[] = arr.ArrayListToArray(arrList);
         System.out.println("Array list converted to Primitive Array: " + Arrays.toString(arrPrimitive));
+
+        input.disposeScanner();
     }
 }
