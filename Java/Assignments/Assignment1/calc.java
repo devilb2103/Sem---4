@@ -1,3 +1,5 @@
+package Java.Assignments.Assignment1;
+
 import java.lang.Math;
 
 public class Calc {
