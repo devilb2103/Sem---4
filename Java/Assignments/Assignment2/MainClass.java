@@ -14,6 +14,7 @@ public class MainClass {
         ArrayClass arr = new ArrayClass(numCount);
 
         for (int i = 0; i < numCount; i++) {
+            System.out.println(String.format("Enter Number %d: ", i + 1));
             int num = input.intInput();
             arr.appendNums(num);
             // if even
