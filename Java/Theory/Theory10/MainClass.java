@@ -1,3 +1,5 @@
+package Java.Theory.Theory10;
+
 class X{
     void m1(){
         System.out.println("LMAO");
