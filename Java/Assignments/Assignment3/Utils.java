@@ -66,6 +66,7 @@ public class Utils{
             int index = -1;
     
             while(low <= high){
+                
                 int mid = (low + high) / 2 ;
                 // System.out.println("Mid: "+mid);
                 if(compareByAttribute(arr.get(mid), target, attribute) < 0){

@@ -44,9 +44,9 @@ public class Storage{
         utils.copyArrayList(studentDB_PRN, studentDB_Name);
         utils.copyArrayList(studentDB_PRN, studentDB_Marks);
 
-        System.out.println(studentDB_PRN.hashCode());
-        System.out.println(studentDB_Name.hashCode());
-        System.out.println(studentDB_Marks.hashCode());
+        // System.out.println(studentDB_PRN.hashCode());
+        // System.out.println(studentDB_Name.hashCode());
+        // System.out.println(studentDB_Marks.hashCode());
 
         ss.quickSort(studentDB_PRN, "prn");
         ss.quickSort(studentDB_Name, "name");
@@ -194,19 +194,21 @@ public class Storage{
 
     // delete student (by PRN)
     public void deleteStudent(){
+
         System.out.println("Enter PRN: ");
         int prn = input.intInput();
 
-        int prn_index = ss.binarySearch(studentDB_PRN, "prn", studentDB_PRN.size() - 1, new Student(prn, "", 0));
+        int prn_index = ss.binarySearch(studentDB_PRN, "prn", studentDB_PRN.size(), new Student(prn, "", 0));
 
+        
         if(Integer.compare(prn_index, -1) == 0){
             System.out.println(String.format("Student with PRN %d does not exist", prn));
             return;
         }
-
-        int name_index = ss.binarySearch(studentDB_Name, "prn", studentDB_Name.size() - 1, new Student(prn, "", 0));
-        int marks_index = ss.binarySearch(studentDB_Marks, "prn", studentDB_Marks.size() - 1, new Student(prn, "", 0));
-
+        
+        int name_index = ss.binarySearch(studentDB_Name, "name", studentDB_Name.size(), new Student(prn, "", 0));
+        int marks_index = ss.binarySearch(studentDB_Marks, "marks", studentDB_Marks.size(), new Student(prn, "", 0));
+        
         studentDB_PRN.remove(prn_index);
         studentDB_Name.remove(name_index);
         studentDB_Marks.remove(marks_index);
