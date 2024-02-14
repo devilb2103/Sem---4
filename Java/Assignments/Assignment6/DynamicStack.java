@@ -2,11 +2,22 @@ package Java.Assignments.Assignment6;
 
 import java.util.ArrayList;
 
-import javax.management.RuntimeErrorException;
-
 public class DynamicStack implements StackInterface{
 
     private ArrayList<Integer> arr = new ArrayList<Integer>();
+
+    @Override
+    public boolean isOverflow() {
+        return false;
+    }
+
+    @Override
+    public boolean isUnderflow() {
+        if(!(this.arr.size() > 0)){
+            return true;
+        }
+        return false;
+    }
 
     @Override
     public void pop() {
@@ -30,5 +41,6 @@ public class DynamicStack implements StackInterface{
         }
         System.out.println("\n");
     }
+
     
 }

@@ -20,6 +20,9 @@ public class MainClass {
         f_stack.pop();
         f_stack.pop();
         f_stack.display();
+        System.out.println(f_stack.isOverflow());
+        System.out.println(f_stack.isUnderflow());
+        
         try {
             f_stack.pop();
         } catch (RuntimeException e) {
@@ -46,6 +49,9 @@ public class MainClass {
         d_stack.pop();
         d_stack.pop();
         d_stack.display();
+        System.out.println(d_stack.isOverflow());
+        System.out.println(d_stack.isUnderflow());
+
         try {
             d_stack.pop();
         } catch (RuntimeException e) {

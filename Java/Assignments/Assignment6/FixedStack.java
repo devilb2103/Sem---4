@@ -22,6 +22,18 @@ public class FixedStack implements StackInterface{
     }
 
     @Override
+    public boolean isUnderflow(){
+        if(sizeState == -1) return true;
+        return false;
+    }
+
+    @Override
+    public boolean isOverflow(){
+        if(sizeState == 1) return true;
+        return false;
+    }
+
+    @Override
     public void pop() {
         if(sizeState > -1){
             this.arr[insertPos - 1] = Integer.MIN_VALUE;
