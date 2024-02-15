@@ -1,4 +1,4 @@
-package Java.Assignments.Assignment6;
+package Java.Assignments.Assignment6.Part1;
 
 import java.util.ArrayList;
 
