@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="PropertyDialog.dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="595"/>
+		<item key="DIALOG_X_ORIGIN" value="539"/>
 		<item key="DIALOG_Y_ORIGIN" value="335"/>
 		<item key="DIALOG_WIDTH" value="1392"/>
 		<item key="DIALOG_HEIGHT" value="717"/>
