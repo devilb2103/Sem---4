@@ -1,14 +1,12 @@
-currPos = [4, 4]
-targetPos = [8, 8]
 deltaPos = [[-1, 2], [1, 2], [2, 1], [2, -1], [1, -2], [-1, -2], [-2, -1], [-2, 1]]
-
-minSteps = None
-minPath = None
 
 def addPos(pos1: list, pos2: list) -> list:
     return [pos1[0] + pos2[0], pos1[1] + pos2[1]]
 
-def moveKnight(currSteps: int, currPath: list, currPos: list) -> None:
+board_size = 8
+max_step_limit = ((2 * board_size) / 3) + 1
+
+def moveKnight(currSteps: int, currPath: list, currPos: list, targetPos: list) -> None:
     global minSteps, minPath
     
     path = currPath
@@ -25,24 +23,50 @@ def moveKnight(currSteps: int, currPath: list, currPos: list) -> None:
         if(minSteps == None or steps < minSteps):
             minSteps = steps
             minPath = path
+            # print(minSteps, minPath)
             return
     
-    # spawn new step branch
+    # spawn new recursion step branch
     else:
         for i in deltaPos:
             nextPos = addPos(pos, i)
-            # check for valid pos not out of board else return
+            # check for valid pos that is not out of chess board else return
             if(not(0 < nextPos[0] < 9 and 0 < nextPos[1] < 9)): continue
-            # print(steps + 1, path, nextPos)
-            path.append(nextPos)
-            nextPath = path
-            moveKnight(steps + 1, nextPath, nextPos)
+            elif(minSteps != None and steps >= minSteps): continue
+            nextPath = path.copy() + [nextPos]
+            moveKnight(steps + 1, nextPath, nextPos, targetPos)
 
+while(True):
+    curr_pos = eval(str(input("Start Pos (format [x <int>, y <int>]): ")))
+    targetPos = eval(str(input("Target Pos (format [x <int>, y <int>]): ")))
 
-stepInit = 0
-pathInit = list([currPos])
-posInit = currPos
-moveKnight(0, pathInit, posInit)
+    if(1 <= curr_pos[0] <= 8 and 1 <= curr_pos[1] <= 8 and 1 <= targetPos[0] <= 8 and 1 <= targetPos[1] <= 8):
+        pass
+    elif(type(curr_pos) != list or type(targetPos) != list or len(curr_pos) != len(targetPos) != 2 ):
+        print("Invalid board locations entered")
+    else:
+        print("Invalid board locations entered")
+        continue
 
-print(minSteps, minPath)
-print(len(minPath))
+    minSteps = max_step_limit
+    minPath = None
+    moveKnight(0, [curr_pos], curr_pos, targetPos)
+    if(minPath != None):
+        print(f"{targetPos} can be reached from {curr_pos} in {minSteps} steps\npath: {minPath}", "\n\n\n")
+    else:
+        print(f"Path from {curr_pos} to {targetPos} cannot be found.")
+
+    end = False
+    while True:
+        state = input("End program?? (y/n)")
+        if(state.lower() == "y"):
+            end = True
+            break
+        elif(state.lower() == "n"):
+            break
+        else:
+            print("invalid option")
+            continue
+    
+    if(end):
+        break
