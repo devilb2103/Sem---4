@@ -5,9 +5,9 @@ public abstract class AudioFile {
 	private String author = "";
 	private String title = "";
 	
-	// constructor
+	// constructors
 	AudioFile(){
-//		Utils.emulateLinux();
+		// Utils.emulateLinux();
 	}
 	
 	AudioFile(String pathname){
@@ -16,16 +16,28 @@ public abstract class AudioFile {
 		parseFilename(this.getFilename());
 	}
 	
+	public static void main(String[] args) {
+		AudioFile f2 = new TaggedFile("audiofiles/Rock 812.mp3");
+		System.out.println(f2.getAuthor());
+	}
+	
+	// abstract methods ====================================================================================================
 	public abstract void play();
 	public abstract void togglePause();
 	public abstract void stop();
 	public abstract String formatDuration();
 	public abstract String formatPosition();
-
+	
+	
+	
+	// functional base class methods ====================================================================================================
 	public void parsePathname(String path) {
 		
 		// edge case checks
-		if(path.stripTrailing() == "") return;
+		if(path.stripTrailing() == "") {
+			this.pathname = "";
+			return;
+		}
 		
 		
 		// left and right stripping
@@ -103,8 +115,8 @@ public abstract class AudioFile {
 			title = name.strip();
 		}
 		
-		this.author = author;
-		this.title = title;
+		this.author = author.strip();
+		this.title = title.strip();
 		
 	}
 	
@@ -122,6 +134,14 @@ public abstract class AudioFile {
 	
 	public String getTitle() {
 		return title;
+	}
+	
+	protected void SetAuthor(String author) {
+		this.author = author;
+	}
+	
+	protected void SetTitle(String title) {
+		this.title = title;
 	}
 	
 	public String toString() {

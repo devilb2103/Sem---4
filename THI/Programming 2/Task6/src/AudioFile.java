@@ -19,7 +19,10 @@ public class AudioFile {
 	public void parsePathname(String path) {
 		
 		// edge case checks
-		if(path.stripTrailing() == "") return;
+		if(path.stripTrailing() == "") {
+			this.pathname = "";
+			return;
+		}
 		
 		
 		// left and right stripping
@@ -42,6 +45,10 @@ public class AudioFile {
 			String pathElements[] = oldPath.split("\\\\");
 			if(oldPath.toCharArray()[oldPath.toCharArray().length - 1] != '\\') fileName = pathElements[pathElements.length - 1];
 						
+			System.out.printf("\n\nPath == %s\n\n", oldPath);
+			if(oldPath.equals(" ")) { oldPath = "";}
+//			System.out.println();
+			
 			// store file path and name
 			this.pathname = oldPath;
 			this.filename = fileName;
@@ -72,7 +79,9 @@ public class AudioFile {
 			// rejoin path terms and add extra slash in end if present originally
 			oldPath = String.join("/", pathElements);		
 			if(endsWithSlash == true) oldPath += "/";
-						
+			
+			if(oldPath.equals(" ")) { oldPath = "";}
+			
 			this.pathname = oldPath;
 			this.filename = fileName;
 		}
