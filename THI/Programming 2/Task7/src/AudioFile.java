@@ -16,11 +16,6 @@ public abstract class AudioFile {
 		parseFilename(this.getFilename());
 	}
 	
-	public static void main(String[] args) {
-		AudioFile f2 = new TaggedFile("audiofiles/Rock 812.mp3");
-		System.out.println(f2.getAuthor());
-	}
-	
 	// abstract methods ====================================================================================================
 	public abstract void play();
 	public abstract void togglePause();
@@ -120,6 +115,7 @@ public abstract class AudioFile {
 		
 	}
 	
+	// getters ====================================================================================================
 	public String getPathname() {
 		return pathname;
 	}
@@ -136,6 +132,7 @@ public abstract class AudioFile {
 		return title;
 	}
 	
+	// setters ====================================================================================================
 	protected void SetAuthor(String author) {
 		this.author = author;
 	}
@@ -144,6 +141,7 @@ public abstract class AudioFile {
 		this.title = title;
 	}
 	
+	// miscellaneous ====================================================================================================
 	public String toString() {
 		String author = getAuthor();
 		String title = getTitle();

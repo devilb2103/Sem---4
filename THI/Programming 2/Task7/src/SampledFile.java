@@ -4,25 +4,21 @@ import studiplayer.basic.BasicPlayer;
 
 public abstract class SampledFile extends AudioFile{
 	
-	protected String filename, pathname;
+//	protected String filename, pathname;
 	protected long duration;
 	
 	SampledFile(){
 		
 	}
 	
-	SampledFile(String path){
-		super(path);
-		this.filename = super.getFilename();
-		this.pathname = super.getPathname();
+	SampledFile(String pathname){
+		super(pathname);
+//		this.filename = super.getFilename();
+//		this.pathname = super.getPathname();
 		
 		if(!canReadPath(pathname)) {
 			throw new RuntimeException(String.format("Cannot read file with path: %s", pathname));
 		}
-	}
-	
-	public static void main(String[] args) {
-		System.out.println(SampledFile.timeFormatter(999999L));
 	}
 	
 	protected static String timeFormatter(long timeInMicroSeconds) {
@@ -33,6 +29,8 @@ public abstract class SampledFile extends AudioFile{
 			long total_seconds = timeInMicroSeconds / 1000000;
 			long minutes = Math.floorDiv(total_seconds, 60);
 			
+			// if length is too long then throw error
+			// because it is not supposed to be parsable (atleast not for now)
 			if(minutes > 99) {
 				throw new RuntimeException("Invalid time format");
 			}
@@ -42,7 +40,7 @@ public abstract class SampledFile extends AudioFile{
 	}
 	
 	public void play() {
-		BasicPlayer.play(this.pathname);
+		BasicPlayer.play(super.getPathname());
 	}
 	
 	public void togglePause() {
