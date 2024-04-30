@@ -6,8 +6,12 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="expected"/>
+		<item key="selection" value="Filename"/>
 		<list key="findhistory">
+			<item value="filename"/>
+			<item value="title"/>
+			<item value="fail"/>
+			<item value="stop"/>
 			<item value="expected"/>
 			<item value="printf"/>
 			<item value="pathElements"/>

@@ -1,4 +1,4 @@
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 import static org.junit.Assert.fail;
 
 import org.junit.Test;
@@ -48,7 +48,6 @@ public class TestSubtaskA {
 		tf1.togglePause();
 		Thread.sleep(2000);
 		long position = BasicPlayer.getPosition();
-		//System.out.println(position);
 		assertTrue("Song did not play for 4 seconds!", 4000000L < position);		
 	}
 
@@ -61,7 +60,6 @@ public class TestSubtaskA {
 		Thread.sleep(3000);
 		tf1.stop();
 		long position = BasicPlayer.getPosition();
-		//System.out.println(position);
 		assertTrue("Song did not play for 3 seconds!", 3000000L < position);		
 	}
 }

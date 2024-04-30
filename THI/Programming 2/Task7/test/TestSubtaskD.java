@@ -10,6 +10,7 @@ import studiplayer.basic.WavParamReader;
 public class TestSubtaskD {
 	@Test
 	public void test_timeFormatter1() {
+		TaggedFile.timeFormatter(141400816L);
 		assertEquals("Time value not formatted correctly!", "02:21", TaggedFile.timeFormatter(141400816L));
 		assertEquals("Time value not formatted correctly!", "02:21", WavFile.timeFormatter(141400816L));
 		assertEquals("Time value not formatted correctly!", "02:21", SampledFile.timeFormatter(141400816L));

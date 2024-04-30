@@ -344,6 +344,9 @@ public class AudioFileTest {
         AudioFile af = new AudioFile();
         af.parsePathname("/part1/mymusic/ -");
         char sepchar = System.getProperty("file.separator").charAt(0);
+        System.out.println(sepchar + "part1" + sepchar +
+        		"mymusic" + sepchar + " -");
+        System.out.printf("ans: %s", af.getFilename());
         assertEquals("Pathname stored incorrectly", sepchar + "part1" + sepchar +
                     "mymusic" + sepchar + " -", af.getPathname());
         assertEquals("Returned filename is incorrect", "-", af.getFilename());

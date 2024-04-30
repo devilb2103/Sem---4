@@ -27,7 +27,7 @@ public class TestSubtaskB {
 				tf.getAuthor());
 		assertEquals("Incorrect value for album!", "TheAbsoluteNecessityOfMeaning",
 				tf.getAlbum());
-		assertEquals("Incorrect value for duration!", 355154000L,
+		assertEquals("Incorrect value for duration!", 355154000,
 				tf.getDuration());
 	}
 
