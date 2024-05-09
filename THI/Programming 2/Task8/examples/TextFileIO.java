@@ -86,8 +86,8 @@ public class TextFileIO {
 				"zweite Zeile",
 				"######################"
 		};
-		writeFile("test.txt", lines);
-		List<String> linesRead = readFile("test.txt");
+		writeFile("test.m3u", lines);
+		List<String> linesRead = readFile("test.m3u");
 		for (String line : linesRead) {
 			System.out.println(line);
 		}

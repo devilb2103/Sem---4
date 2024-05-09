@@ -74,6 +74,7 @@ public class TestSubtaskB {
 		pl.getList().add(tf3);
 
 		pl.setCurrent(4);
+		System.out.println(pl.getCurrent());
 		assertEquals("wrong current index!", 4, pl.getCurrent());
 		pl.nextSong();
 		assertEquals("wrong current index after change to next song!",
