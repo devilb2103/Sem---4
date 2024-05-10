@@ -6,7 +6,7 @@ public class WavFile extends SampledFile{
 
 	}
 	
-	WavFile(String pathname) {
+	WavFile(String pathname) throws RuntimeException {
 		super(pathname);
 		
 		// throw error to terminate if file path is not readable

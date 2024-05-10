@@ -10,7 +10,7 @@ public abstract class SampledFile extends AudioFile{
 		
 	}
 	
-	SampledFile(String pathname){
+	SampledFile(String pathname) throws RuntimeException {
 		super(pathname);
 		
 		if(!canReadPath(pathname)) {
@@ -18,7 +18,7 @@ public abstract class SampledFile extends AudioFile{
 		}
 	}
 	
-	protected static String timeFormatter(long timeInMicroSeconds) {
+	protected static String timeFormatter(long timeInMicroSeconds) throws RuntimeException {
 		if(timeInMicroSeconds < 0 || timeInMicroSeconds > Long.MAX_VALUE) {
 			throw new RuntimeException("Invalid time format");
 		}
