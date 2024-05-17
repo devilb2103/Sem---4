@@ -11,11 +11,16 @@ pets([cat, budgie, dog, parrot, hamster]).
 % predicate that defines the structre of rooms
 rooms([_,_,_,_,_]).
 
-% predicate that checks for list elements beside each other
+% predicate that checks for list elements beside each other (either left or right to each other)
 next_to(X, Y, [X, Y | _]).
 next_to(X, Y, [Y, X | _]).
 next_to(X, Y, [_ | Right]) :-
     next_to(X,Y, Right).
+
+% predicate that checks for list elements where one is to the left of the other
+left_to(X, Y, [X, Y | _]).
+left_to(X, Y, [_ | Right]) :-
+    left_to(X,Y, Right).
 
 solution :-
     % import rooms structure to local predicate scope
@@ -40,7 +45,7 @@ solution :-
     member([max, red, _, _, _], Rooms),
     member([bert, _, _, tea, _], Rooms),
     member([ute, _, _, _, cat], Rooms),
-    next_to([_, green, _, coffee, _], [_, white, _, _, _], Rooms),
+    left_to([_, green, _, coffee, _], [_, white, _, _, _], Rooms),
     member([_, _, eit, _, budgie], Rooms),
     member([_, yellow, mechanical_engineering, _, _], Rooms),
     member([_, _, eit, _, budgie], Rooms),
@@ -53,7 +58,7 @@ solution :-
     member([Hamsterowner,_,_,_,hamster], Rooms),
     
     %% -- define conditions that validate that correct class of elements exist in the rooms 2d array
-    %%% -- imported to the local predicate scope earlier --
+    %% -- imported to the local predicate scope earlier --
     people(_people), doors(_doors), degrees(_degrees), drinks(_drinks), pets(_pets),
     member(Person1, _people), member(Person2, _people), member(Person3, _people), member(Person4, _people), member(Person5, _people), 
     member(Door1, _doors), member(Door2, _doors), member(Door3, _doors), member(Door4, _doors), member(Door5, _doors), 
