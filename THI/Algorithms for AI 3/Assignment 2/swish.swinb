@@ -1,0 +1,73 @@
+<div class="notebook">
+
+<div class="nb-cell program" data-background="true" name="p1">
+% predicates to store all different types of people, door colors, degrees, drinks and pets for later
+people([max, bert, ute, monika, rudolf]).
+doors([red, green, white, yellow, blue]).
+degrees([eit, mechanical_engineering, ai, computer_science, business_administration]).
+drinks([tea, coffee, milk, orange_juice, water]).
+pets([cat, budgie, dog, parrot, hamster]).
+
+% predicate that defines the structre of rooms
+rooms([_,_,_,_,_]).
+
+% predicate that checks for list elements beside each other
+next_to(X, Y, [X, Y | _]).
+next_to(X, Y, [Y, X | _]).
+next_to(X, Y, [_ | Right]) :-
+    next_to(X,Y, Right).
+
+solution :-
+    % import rooms structure to local predicate scope
+    rooms(Rooms),
+	
+    % define open variables for each element in rooms for validation later
+    Rooms = [
+            [Person1, Door1, Degree1, Drink1, Pet1],
+              [Person2, Door2, Degree2, Drink2, Pet2],
+              [Person3, Door3, Degree3, Drink3, Pet3],
+              [Person4, Door4, Degree4, Drink4, Pet4],
+              [Person5, Door5, Degree5, Drink5, Pet5]
+            ],
+    
+    % --------------- logic for conditions given in the questions ---------------
+    
+    %% -- correctly define the absolute positions of rooms with monika and milk as stated in the question --
+    nth1(1, Rooms, [monika, _, _, _, _]),
+    nth1(3, Rooms, [_, _, _, milk, _]),
+    
+    %% -- define other conditions given in the questions --
+    member([max, red, _, _, _], Rooms),
+    member([bert, _, _, tea, _], Rooms),
+    member([ute, _, _, _, cat], Rooms),
+    next_to([_, green, _, coffee, _], [_, white, _, _, _], Rooms),
+    member([_, _, eit, _, budgie], Rooms),
+    member([_, yellow, mechanical_engineering, _, _], Rooms),
+    member([_, _, eit, _, budgie], Rooms),
+    next_to([_, _, ai, _, _], [_, _, _, _, dog], Rooms),
+    next_to([_, _, _, _, parrot], [_, _, mechanical_engineering, _, _], Rooms),
+    member([_, _, computer_science, orange_juice, _], Rooms),
+    member([rudolf, _, business_administration, _, _], Rooms),
+    next_to([monika, _, _, _, _], [_, blue, _, _, _], Rooms),
+    next_to([_, _, ai, _, _], [_, _, _, water, _], Rooms),
+    member([Hamsterowner,_,_,_,hamster], Rooms),
+    
+    %% -- define conditions that validate that correct class of elements exist in the rooms 2d array
+    %%% -- imported to the local predicate scope earlier --
+    people(_people), doors(_doors), degrees(_degrees), drinks(_drinks), pets(_pets),
+    member(Person1, _people), member(Person2, _people), member(Person3, _people), member(Person4, _people), member(Person5, _people), 
+    member(Door1, _doors), member(Door2, _doors), member(Door3, _doors), member(Door4, _doors), member(Door5, _doors), 
+    member(Degree1, _degrees), member(Degree2, _degrees), member(Degree3, _degrees), member(Degree4, _degrees), member(Degree5, _degrees), 
+    member(Drink1, _drinks), member(Drink2, _drinks), member(Drink3, _drinks), member(Drink4, _drinks), member(Drink5, _drinks), 
+    member(Pet1, _pets), member(Pet2, _pets), member(Pet3, _pets), member(Pet4, _pets), member(Pet5, _pets),
+    
+    %% -- print out the solution --
+    writeln("Solution": Rooms),
+    writeln("Owner of hamster": Hamsterowner).
+</div>
+
+<div class="nb-cell query" name="q1">
+solution.
+</div>
+
+</div>
