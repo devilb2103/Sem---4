@@ -6,17 +6,23 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="Exception"/>
+		<item key="selection" value=""/>
 		<list key="findhistory">
-			<item value="exception"/>
-			<item value="filename"/>
-			<item value="title"/>
-			<item value="fail"/>
-			<item value="stop"/>
-			<item value="expected"/>
-			<item value="printf"/>
-			<item value="pathElements"/>
-			<item value="parsePathname"/>
+			<item value="tostri"/>
+			<item value="jump"/>
+			<item value="jumpToAudioFile"/>
+			<item value="out"/>
+			<item value="print"/>
+			<item value="currentAudioFile"/>
+			<item value="system.out"/>
+			<item value="hasnex"/>
+			<item value="hehe"/>
+			<item value="getList"/>
+			<item value="current"/>
+			<item value="iterator"/>
+			<item value="iterat"/>
+			<item value="album"/>
+			<item value="al"/>
 		</list>
 		<list key="replacehistory">
 		</list>
