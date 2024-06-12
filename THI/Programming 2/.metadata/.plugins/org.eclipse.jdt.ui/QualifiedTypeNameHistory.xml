@@ -27,7 +27,6 @@
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.lang.Class"/>
     <fullyQualifiedTypeName name="org.hamcrest.core.IsInstanceOf"/>
-    <fullyQualifiedTypeName name="studiplayer.audio.SampledFile"/>
     <fullyQualifiedTypeName name="studiplayer.cert.SortCriterionTest"/>
     <fullyQualifiedTypeName name="studiplayer.audio.PlayList.SortCriterion"/>
     <fullyQualifiedTypeName name="java.lang.Iterable"/>
@@ -48,8 +47,11 @@
     <fullyQualifiedTypeName name="javafx.scene.layout.BorderPane"/>
     <fullyQualifiedTypeName name="javafx.scene.layout.VBox"/>
     <fullyQualifiedTypeName name="javafx.geometry.Pos"/>
-    <fullyQualifiedTypeName name="studiplayer.audio.PlayList"/>
-    <fullyQualifiedTypeName name="studiplayer.audio.AudioFile"/>
     <fullyQualifiedTypeName name="studiplayer.audio.SortCriterion"/>
+    <fullyQualifiedTypeName name="studiplayer.audio.SampledFile"/>
+    <fullyQualifiedTypeName name="studiplayer.audio.AudioFile"/>
+    <fullyQualifiedTypeName name="studiplayer.ui.Player.PlayerThread"/>
+    <fullyQualifiedTypeName name="studiplayer.audio.PlayList"/>
+    <fullyQualifiedTypeName name="studiplayer.ui.Player.TimerThread"/>
     <fullyQualifiedTypeName name="studiplayer.ui.SongTable"/>
 </qualifiedTypeNameHistroy>

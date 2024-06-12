@@ -6,23 +6,23 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="songTable"/>
+		<item key="selection" value="createSon"/>
 		<list key="findhistory">
+			<item value="createson"/>
+			<item value="getaudi"/>
+			<item value="getaudio"/>
+			<item value="songTable"/>
+			<item value="playTimeLabel"/>
+			<item value="playerThread ="/>
+			<item value="playerThread = null;"/>
+			<item value="playerThread"/>
 			<item value="PlayerThread"/>
-			<item value="SongTable"/>
-			<item value="play"/>
-			<item value="sortcri"/>
-			<item value="getsort"/>
-			<item value="button"/>
-			<item value="getItems"/>
-			<item value="box"/>
-			<item value="ageProperty"/>
-			<item value="pear"/>
-			<item value="setonac"/>
-			<item value="ITERATIONS"/>
-			<item value="tostri"/>
-			<item value="jump"/>
-			<item value="jumpToAudioFile"/>
+			<item value="sys"/>
+			<item value="syso"/>
+			<item value="playCurrentSong"/>
+			<item value="pausecurr"/>
+			<item value="playing next"/>
+			<item value="lmao"/>
 		</list>
 		<list key="replacehistory">
 		</list>
