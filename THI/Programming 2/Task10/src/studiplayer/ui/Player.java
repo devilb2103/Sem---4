@@ -73,11 +73,11 @@ public class Player extends Application{
 		if (useCertPlayList) {
 	        playList = new PlayList(DEFAULT_PLAYLIST);
 	    } else {
-	    	playList = new PlayList(TEST_PLAYLIST);
-//	        FileChooser fileChooser = new FileChooser();
-//	        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("M3U Files", "*.m3u"));
-//	        File selectedFile = fileChooser.showOpenDialog(primaryStage);
-//	        loadPlayList(selectedFile.getPath());
+	    	// playList = new PlayList(TEST_PLAYLIST);
+	        FileChooser fileChooser = new FileChooser();
+	        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("M3U Files", "*.m3u"));
+	        File selectedFile = fileChooser.showOpenDialog(primaryStage);
+	        loadPlayList(selectedFile.getPath());
 	    }
 		
 		// load app
